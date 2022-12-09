@@ -37,3 +37,15 @@ class mobileNavBar {
     ".lista li",
 );
 mobileNavBar.init();
+
+if(localStorage.getItem('token') == null){
+    alert('Você precisa estar logado para acessar a página.')
+}
+function sair(){
+    localStorage.removeItem('token')
+    window.location.href= 'login.html'
+}
+
+function mostrar(){
+    localStorage.setItem(listaUser)
+}
